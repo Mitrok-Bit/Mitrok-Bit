@@ -1,1 +1,5 @@
 dnf config-manager --set-enabled crb && dnf install https://dl.fedoraproject.org/pub/epel/epel{,-next}-release-latest-9.noarch.rpm
+subscription-manager repos --enable codeready-builder-for-rhel-9-$(arch)-rpms && dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
+dnf config-manager --set-enabled crb && dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
+subscription-manager repos --enable codeready-builder-for-rhel-8-$(arch)-rpms && dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+dnf config-manager --set-enabled powertools && dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
